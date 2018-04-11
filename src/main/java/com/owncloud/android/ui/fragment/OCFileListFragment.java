@@ -409,7 +409,8 @@ public class OCFileListFragment extends ExtendedListFragment implements OCFileLi
             @Override
             public void onClick(View v) {
                 UploadFilesActivity.startUploadActivityForResult(getActivity(), ((FileActivity) getActivity())
-                        .getAccount(), FileDisplayActivity.REQUEST_CODE__SELECT_FILES_FROM_FILE_SYSTEM);
+                        .getAccount(), FileDisplayActivity.REQUEST_CODE__SELECT_FILES_FROM_FILE_SYSTEM,
+                        getCurrentFile());
                 getFabMain().collapse();
                 recordMiniFabClick();
             }
